@@ -6,7 +6,7 @@ This is simple Authentication system written in Django.I used
 build-in authentication forms which i rewrote, the way i wanted.
 In this app you can:
 - create new account
-- login new account
+- login in your account
 - change your password while logged in
 - recover your password, by sending you an email.
 The front-end is a bit simple,but i can be rewritten to look better!
