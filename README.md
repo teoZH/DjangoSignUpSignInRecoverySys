@@ -8,7 +8,7 @@ In this app you can:
 - create new account
 - login new account
 - change your password while logged in
-- recover your password, by sending you an email
+- recover your password, by sending you an email.
 The front-end is a bit simple,but i can be rewritten to look better!
 There is maybe one or two weaknesses which have to be removed in order to work better!
 The email part is made only for develepment server, because it practically sends the email
