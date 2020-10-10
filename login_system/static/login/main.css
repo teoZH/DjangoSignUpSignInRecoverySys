@@ -1,0 +1,111 @@
+.log_reg {
+  font-family: 'Vollkorn', serif;
+  position: relative;
+  top:30px;
+  left: 35%;
+}
+
+.reset {
+  font-family: 'Vollkorn', serif;
+  position: relative;
+  top:20px;
+  left:25%;
+}
+
+
+label {
+  font-family: 'Vollkorn', serif;
+  font-size: 20px;
+}
+
+.wrapper {
+  position:relative;
+  height: auto;
+  width: 500px;
+  border: 0px solid;
+  border-radius:20px;
+  margin: 10% 30%;
+   background: rgb(195,235,176);
+background: linear-gradient(315deg, rgba(195,235,176,1) 14%, rgba(122,153,189,1) 85%);
+  -webkit-box-shadow: 0px 0px 23px 8px rgba(0,0,0,0.7);
+-moz-box-shadow: 0px 0px 23px 8px rgba(0,0,0,0.7);
+box-shadow: 0px 0px 23px 8px rgba(0,0,0,0.7);
+}
+
+.form_element {
+  margin: 50px 80px;
+  font-family: 'Vollkorn', serif;
+}
+
+input {
+  width: 100%;
+  font-size: 25px;
+  font-family: 'Vollkorn', serif;
+  height: 35px;
+  border: 2px;
+  border-radius: 5px;
+}
+
+.bottom {
+  display: inline;
+  width:100%;
+}
+
+.btn {
+  font-size: 25px;
+  font-family: 'Vollkorn', serif;
+  background-color: #3b9131;
+  transition-duration: 0.4s;
+  border: none;
+  border-radius: 5px;
+  float: right;
+
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.register {
+  position: relative;
+  top: 10px;
+  font-size: 15px;
+}
+
+.forgotten {
+  margin-top:25px;
+  }
+
+
+.helptext {
+  font-size: 14px;
+  font-family: 'Vollkorn', serif;
+  margin: 10px 0px;
+}
+
+input {
+  margin: 10px 0px;
+}
+
+.errorlist {
+  margin: 0px 20px 10px 60px;
+  font-size: 15px;
+  font-family: 'Vollkorn', serif;
+  color: red;
+}
+
+.errors {
+    margin: 20px 20px 10px 80px;
+    font-size: 15px;
+    font-family: 'Vollkorn', serif;
+    color: red;
+}
+
+
+
+
+
+
+
+
+

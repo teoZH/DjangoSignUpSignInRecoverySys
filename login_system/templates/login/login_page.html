@@ -1,0 +1,32 @@
+{% load static %}
+<html lang='en'>
+
+<head>
+  <title>Login Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href='{% static "login/main.css" %}'>
+</head>
+<body>
+<div class='wrapper'>
+  <h1 class="log_reg">SIGN IN</h1>
+  <form method='post' class='form_element'>
+      {% csrf_token %}
+      {{ form.username.label_tag }}<br>
+      {{ form.username }}<br>
+      {{ form.password.label_tag }}<br>
+      {{ form.password }} <br>
+    <span class='register'>Not a <a href='{% url "register" %}'>registered</a> member?</span>
+    <button type='submit' class='btn'>Login</button>
+    <div class='forgotten'><a href='{% url "pass_reset" %}'>Forgotten password?</a></div>
+  </form>
+    {% if error %}
+    <div class="errors">
+        <div>{{ error }}</div>
+    </div><br>
+    {% else %}
+    <br>
+    {% endif %}
+</div>
+</body>
+
+</html>

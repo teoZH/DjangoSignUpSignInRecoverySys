@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% if user.is_authenticated %}
+    <h1>Hello <b>{{ user.username }}</b></h1>
+    {% else %}
+    <h1>Hello <b>mothefucka!</b></h1>
+    <h4>Press here to <a href="{% url 'login_in' %}">login</a>!</h4>
+    <h4>Press here to <a href="{% url 'register' %}">register</a>!</h4>
+    {% endif %}
+
+    {% if user.is_superuser and user.is_authenticated %}
+    <h3><b><a href="admin/logout">Log Out</a></b></h3>
+    <h3><b><a href="{% url 'pass_change' %}">Change password!</a></b></h3>
+    {% elif user.is_authenticated %}
+    <h3><b><a href="accounts/logout">Log Out</a></b></h3>
+    <h3><b><a href="{% url 'pass_change' %}">Change password!</a></b></h3>
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+{% load static %}
+
+<html lang='en'>
+
+<head>
+  <title>Register Here!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'login/main.css' %}">
+</head>
+<body>
+<div class='wrapper'>
+  <h1 class="log_reg">SIGN UP</h1>
+  <form method='post' class='form_element'>
+    {% csrf_token %}
+    {{ form.username.label_tag }}<br>
+    {{ form.username }}<br>
+    {{ form.username.errors }}
+    {{ form.username.help_text }}<br>
+    {{ form.password1.label_tag }}<br>
+    {{ form.password1 }}<br>
+    {{ form.password1.help_text }}
+    {{ form.password2.label_tag }}<br>
+    {{ form.password2 }}
+    {{ form.email.label_tag }}<br>
+    {{ form.email }}
+    <div class='bottom'>
+      <div  class='register'></div>
+      <button type='submit' class='btn'>Register</button>
+    </div>
+  </form>
+  {% if form.errors %}
+        {% for field in form %}
+              <ul class="errorlist">
+            {% for error in field.errors %}
+                  <li>{{ error }}</li>
+            {% endfor %}
+              </ul>
+        {% endfor %}
+        <ul class="errorlist">
+        {% for error in form.non_field_errors %}
+            <li>{{ error }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+  {% if error %}
+   <div class='errors'>
+    <span>{{ error }}</span>
+   </div><br>
+  {% endif %}<br>
+</div>
+</body>
+
+</html>
+
